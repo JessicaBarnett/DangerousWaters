@@ -1,0 +1,64 @@
+
+
+.layerable div{
+	/*positions 2nd container behind 1st.  Very specific selector.  won't work in other order.  why?
+	wrapper has to wrap both objects that'll be stacked on top of each other*/
+	position: absolute;
+}
+
+
+[id*=wave]{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+}
+
+
+#wave1{
+	background:url(../svg/wave_topPointShort.svg) no-repeat;
+	background-position: -8px, 480px;
+	background-size: 180%, 180%;
+/*	background: url(../svg/wave_topPointShort.svg) no-repeat -8px 480px;
+	-webkit-animation: waves 3s linear infinite;*/
+}
+
+#wave2{
+/*	bottom: 0px;
+	right: 0px;
+	background-color: green;
+	background: url(../svg/wave_topPointTall.svg) no-repeat -8px 400px;
+	background-size: 180%, 180%;
+	-webkit-animation: waves 3s linear infinite;*/
+}
+
+
+.scene{
+	/*background: url(../svg/wave_topPointShort.svg) no-repeat -8px 480px,
+				url(../svg/wave_topPointTall.svg) no-repeat -8px 400px;
+	background-size: 180%, 180%;
+
+	-webkit-animation: waves 3s linear infinite;
+*/
+}
+
+
+/*keyframes*/
+@-webkit-keyframes waves{
+	0%{background-position: -8px 480px}
+	25%{background-position: auto 400px}
+	50%{background-position: auto 480px}
+	75%{background-position: auto 400px}
+	100%{background-position: -650px 480px}
+}
+
+/*outer limits
+	0%{background-position: -8px 480px, -8px 400px}
+	100%{background-position: -755px 480px, -755px 400px}
+
+loop limits
+	0%{background-position: -8px 480px, -8px 400px}
+	100%{background-position: -650px 480px, -650px 400px}
+*/

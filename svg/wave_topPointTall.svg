@@ -2,7 +2,8 @@
 <!-- Generator: Adobe Illustrator 14.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 43363)  -->
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+	 width="400px" height="71.269px" viewBox="-200 17.231 400 71.269" enable-background="new -200 17.231 400 71.269"
+	 xml:space="preserve">
 <path fill="none" stroke="#000000" d="M200,35.5"/>
 <path fill="none" stroke="#000000" d="M0,35.403"/>
 <path fill="none" stroke="#000000" d="M200,38.169"/>
@@ -10,7 +11,9 @@
 <path fill="none" stroke="#000000" d="M91,73.5"/>
 <path fill="none" stroke="#000000" d="M200,26.565"/>
 <path fill="none" stroke="#000000" d="M0,26.676"/>
-<path fill="#C5FBFC" d="M150,41.01c12.112,0,25.001-23.778,25.001-23.778S189.889,40.897,200,40.897V200H0V41.342
+<path fill="#83BEFF" d="M150,41.01c12.111,0,25.001-23.778,25.001-23.778S189.889,40.897,200,40.897V88.5H0V41.342
 	c12.111,0,25-24.111,25-24.111S37.89,41.01,50,41.01 M100,41.01c-12.112,0-25-23.778-25-23.778S62.111,41.01,50,41.01 M100,41.01
-	c12.111,0,25-23.778,25-23.778s12.889,23.778,25,23.778"/>
+	c12.111,0,25-23.778,25-23.778s12.889,23.778,25,23.778 M-50,41.01c12.11,0,25-23.779,25-23.779s12.889,24.111,25,24.111V88.5h-200
+	V40.897c10.111,0,24.999-23.665,24.999-23.665S-162.111,41.01-150,41.01 M-50,41.01c-12.111,0-25-23.778-25-23.778
+	S-87.888,41.01-100,41.01 M-150,41.01c12.111,0,25-23.778,25-23.778s12.889,23.778,25,23.778"/>
 </svg>

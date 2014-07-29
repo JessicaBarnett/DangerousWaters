@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/*fluid grid with no gutters.  column numbers in each row must add up to 16*/
+/*(formerly fluid) grid with no gutters.  column numbers in each row must add up to 8*/
 
 .container               { width: 960px;
                            height: 600px;      
