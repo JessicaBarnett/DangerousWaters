@@ -10,12 +10,15 @@
 }
 
 .scene{
+	position: relative;
 	width: 960px;
-    height: 600px;      
+    height: 600px;   
+    margin: 30px;   
    	border: 2px solid blue;
 	background: -webkit-linear-gradient(90deg, white, #E3F0FF), 
 				linear-gradient(90deg, white, #E3F0FF);
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
+
 
 

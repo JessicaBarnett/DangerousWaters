@@ -1,25 +1,36 @@
-
-#pirhanaContainer1{
-	opacity: 1;
-}
+/*
+[id*="wave"], [class*="pirhana"], [id*="man"], #help, #directions {
+	opacity: 0;
+}*/
 
 /*big ol everything selectors!!*/
-#pirhanaContainer1, #ffishContainer1, #boatContainer, .ffish_TailFinContainer, .ffish_FinContainer, .ffish_body{
+/*#pirhanaContainer1, #ffishContainer1, #boatContainer, 
+.pirhana_body, .pirhana_jaw, .pirhana_head, .pirhana_fin, 
+.ffish_BackContainer, .ffish_FrontContainer, .ffish_MiddleContainer, 
+.ffish_head, .ffish_body, .ffish_tail, .ffish_frontdorsal, .ffish_frontfin, .ffish_backdorsal, .ffish_backfin, 
+#man_rightArm, #man_leftArm, #man_mouth, #man_stache, #man_eyeOpen{
 	position: absolute;
+}*/
+
+[class*="pirhana"], [class*="ffish"], [id*="man"], [id*="Container"]{
+	position: absolute;	
 }
 
-.pirhana_body, .pirhana_jaw, .pirhana_head, .pirhana_fin,
-#man_rightArm, #man_leftArm, #man_mouth, #man_stache, #man_eyeOpen,
-.ffish_head, .ffish_body, .ffish_tail, .ffish_frontdorsal, .ffish_frontfin, 
-.ffish_backdorsal, .ffish_backfin
+
+.flip{
+	z-index: 360;
+	-webkit-transform: scaleX(-1);
+}
+
+/*#man_rightArm, #man_leftArm, #man_mouth, #man_stache, #man_eyeOpen
 {
 	position: relative;
 }
-
+*/
 /*Boat guy positioning*/
 
 #boatContainer{
-	top: 25px;
+	top: 120px;
 	left: 445px;
 	z-index: 600;
 	-webkit-transform-origin: 100px 350px;
@@ -34,19 +45,20 @@
 #man_rightArm, #man_leftArm{
 	height: 90px;
 	width: 90px;
+	z-index: 605;
 }
 
 
 #man_rightArm{
-	top:225px;
-	left:-80px;
+	top:130px;
+	left:15px;
 	-webkit-transform-origin:70% 2%;
 	-webkit-animation: armWaveRight 5s linear infinite; 
 }
 
 #man_leftArm{
-	top:225px;
-	left:100px;
+	top:130px;
+	left:98px;
 	-webkit-transform-origin:30% 2%;
 	-webkit-animation: armWaveLeft 5s linear infinite;
 }
@@ -54,25 +66,25 @@
 #man_stache{
 	height: 50px;
 	width: 50px;
-	top: -226px;
-	left: -320px;
+	top: 75px;
+	left: 70px;
 	-webkit-animation: moustache 5s linear infinite;
 }
 
 #man_mouth{
 	opacity: 0;
-	height: 30px;
+	height: 50px;
 	width: 30px;
-	top: -238px;
-	left: -270px;
+	top: 73px;
+	left: 85px;
 	-webkit-animation: yellMouth 5s linear infinite;
 }
 
 #man_eyeOpen{
 	height: 40px;
 	width: 40px;
-	top: -250px;
-	left: -365px;
+	top: 60px;
+	left: 78px;
 }
 
 
@@ -155,77 +167,150 @@
 
 /*flying fish positioning*/
 
-.ffish_body{
-	top: 142px;
-	left: 40px;
+[class*="ffish"] [class*="Container"], .ffish_FrontContainer, [id*="flyingFish"]{
+/*	the three absolutely-positioned containers need a height/width 
+set to make trasform-origin & border/bg colors work.  Nested Images
+seem to be set to the width of their contents by default, and don't 
+need this extra step.
+For some reason this isn't selecting the front container, hence its inclusion*/
+	height: 100px;
+	width: 100px;
+	/*background-color: blue;*/
+}
+
+.ffish_FrontContainer{
+/*	border: 8px solid yellow;*/
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotate(-20deg);
+}
+
+.ffish_MiddleContainer{
+	top: 18px;
+	left: 45px;
 	z-index: 30;
-}
-.ffish_FinContainer{
-	top: 0px;
-	left: 0px;
-	-webkit-transform-origin: 60% 65%;
-	-webkit-transform: rotate(-10deg);
-}
-.ffish_TailFinContainer{
-	top: 134px;
-	left: 130px;
-	-webkit-transform-origin: 5% 33%;
+/*	border: 8px solid blue;*/
+	-webkit-transform-origin: 15% 10%;
 	-webkit-transform: rotate(10deg);
 }
-.ffish_tail{
-	z-index: 70;
-} 
-.ffish_frontdorsal{
-	top:70px;
-	left:-30px;
-	-webkit-transform: rotate(60deg);
-	z-index: 90;
-} 
-.ffish_backdorsal{
-	top:-110px;
-	left:15px;
-	-webkit-transform: rotate(-60deg);
-	z-index: 50;
-} 
+
+.ffish_BackContainer{
+	top: 40px;
+	left: 80px;
+/*	border: 8px solid green;*/
+	z-index: 30;
+	-webkit-transform-origin: 8% 10%;
+	-webkit-transform: rotate(10deg);
+}
+
 .ffish_head{
 	z-index: 80;
 }  
 .ffish_frontfin{
-	top: 160px;
-	left: -15px;
-	-webkit-transform: rotate(60deg);
+	top: 40px;
+	left: 50px;
 	z-index: 100;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(60deg);
 } 
 .ffish_backfin{
-	top: -90px;
+	top: 20px;
 	left: 65px;
 	z-index: 40;
-	-webkit-transform: rotate(-80deg);
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(-90deg);
 }
-#ffishContainer1{
-	top: 350px;
-	left: 1000px;
+
+.ffish_body{
+	z-index: 30;
+}
+
+.ffish_tail{
+	z-index: 70;
+} 
+.ffish_frontdorsal{
+	top:20px;
+	left:0px;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(60deg);
+	z-index: 90;
+} 
+.ffish_backdorsal{
+	top: 0px;
+	left: 15px;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(-90deg);
+	z-index: 50;
+} 
+
+
+[id*="flyingFish"]{
+	-webkit-transform-origin: 500% 3500%;
+}
+
+#flyingFishOne{
+	top:250px;
+	left:1000px;
 	z-index: 860;
-	-webkit-transform-origin: -500% 2000%;
-	-webkit-animation: fly 2s 3s linear infinite;
+	-webkit-animation: fly 5s linear infinite;
 }
-#ffishContainer2{
-	top: 200px;
-	left: 100px;
-	-webkit-transform-origin: -500% 2000%;
-	-webkit-animation: fly 2.5s linear infinite;
+
+#flyingFishOne .ffish_FrontContainer{
+	-webkit-animation: straighten 5s linear infinite;
 }
-.flip{
-		z-index: 360;
-	-webkit-transform: scaleX(-1);
+
+#flyingFishTwo{
+	top:150px;
+	left:20px;
+	z-index: 360;
+	-webkit-animation: fly 7s .8s linear infinite;
+}
+
+#flyingFishTwo .ffish_FrontContainer{
+	-webkit-animation: straighten 7s .8s linear infinite;
+}
+
+.ffish_MiddleContainer, .ffish_BackContainer{
+	-webkit-animation: turbulence .5s linear infinite;
+}
+
+.ffish_backfin, .ffish_backdorsal{
+	-webkit-animation: backFinFlap .25s linear infinite;
+}
+
+.ffish_frontfin, .ffish_frontdorsal{
+	-webkit-animation: frontFinFlap .25s linear infinite;
 }
 
 /*flying fish keyframes*/
 
 @-webkit-keyframes fly{
 	0% {-webkit-transform: rotate(0deg);}
-	100% {-webkit-transform: rotate(-80deg);}
+	100% {-webkit-transform: rotate(-90deg);}
 }
+
+@-webkit-keyframes straighten{
+	0% {-webkit-transform: rotate(-20deg);}
+	90% {-webkit-transform: rotate(-80deg);}
+	100% {-webkit-transform: rotate(-20deg);}
+}
+
+@-webkit-keyframes turbulence{
+	0%, 100%{-webkit-transform: rotate(5deg);}
+	50%{-webkit-transform: rotate(-5deg);}
+}
+
+@-webkit-keyframes frontFinFlap{
+	0%, 100%{-webkit-transform: rotate(60deg);}
+	50%{-webkit-transform: rotate(40deg);}
+}
+
+@-webkit-keyframes backFinFlap{
+	0%, 100%{-webkit-transform: rotate(-90deg);}
+	50%{-webkit-transform: rotate(-70deg);}
+}
+
+
+
 
 /*pirhana positioning*/
 
@@ -233,26 +318,26 @@
 	top: 600px;
 	left: 70px;
 	z-index: 850;
-	-webkit-animation: pirhanaHighJump 5s 3s linear infinite;
+	/*-webkit-animation: pirhanaHighJump 5s 3s linear infinite;*/
 }
 
 #pirhanaContainer2{
 	top: 600px;
 	left: 250px;
 	z-index: 650;
-	-webkit-animation: pirhanaLowJump 5s 1s linear infinite;
+/*	-webkit-animation: pirhanaLowJump 5s 1s linear infinite;*/
 }
 #pirhanaContainer3{
 	top: 600px;
 	left: 450px;
 	z-index: 550;
-	-webkit-animation: pirhanaHighJump 5s 1.5s linear infinite;
+/*	-webkit-animation: pirhanaHighJump 5s 1.5s linear infinite;*/
 }
 #pirhanaContainer4{
 	top: 600px;
 	left: 630px;
 	z-index: 750;
-	-webkit-animation: pirhanaLowJump 5s 2.5s linear infinite;
+/*	-webkit-animation: pirhanaLowJump 5s 2.5s linear infinite;*/
 }
 
 .pirhana_body{
@@ -261,22 +346,22 @@
 }
 
 .pirhana_jaw{
-	top:-10px;
-	left:-60px;
+	top: 30px;
+	left:70px;
 	-webkit-transform-origin: bottom left;
 	-webkit-transform: rotate(-10deg);
 	-webkit-animation: jawChomp .5s cubic-bezier(.16, .93, .99, 1.01) infinite;
 }
 .pirhana_head{
-	top:-10px;
-	left:-180px;
+	top: 10px;
+	left:15px;
 	-webkit-transform-origin: bottom right;
 	-webkit-transform: rotate(10deg);
 	-webkit-animation: headChomp .5s cubic-bezier(.16, .93, .99, 1.01) infinite;
 }
 .pirhana_fin{
-	top: 10px;
-	left:-165px;
+	top: 100px;
+	left:100px;
 }
 
 /*pirhana keyframes*/
