@@ -1,0 +1,122 @@
+/*all padding and borders added will cut into the width, not add to it*/
+* {    
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.layerable div{
+	position: absolute;
+}
+
+.scene{
+	position: relative;
+	width: 960px;
+    height: 600px;   
+    margin: 30px;   
+   	border: 2px solid blue;
+	background: -webkit-linear-gradient(90deg, white, #E3F0FF), 
+				linear-gradient(90deg, white, #E3F0FF);
+	/*overflow: hidden;*/
+}
+
+/*General Target Styles*/
+
+[class*="Target"]{
+	border-radius: 25%;
+	background-color: chartreuse;
+	z-index: 1050;
+	position: absolute;
+	opacity:0;
+}
+
+.lgTarget{
+	height: 300px;
+	width: 300px;
+}
+
+.medTarget{
+	height: 200px;
+	width: 200px;
+	background-color: DodgerBlue;
+}
+
+.smTarget{
+	height: 150px;
+	width: 150px;
+	background-color: RosyBrown;
+}
+
+.tinyTarget{
+	height: 50px;
+	width: 50px;
+	background-color: sienna;
+}
+
+/*Large Targets*/
+
+.lgTarget.one{
+	top: 300px;
+}
+
+.lgTarget.two{
+	left: 655px;
+}
+
+.lgTarget.three{
+	left: 300px;
+}
+
+/*Medium Targets*/
+
+.medTarget.one{
+	left: 100px;
+	background-color: MediumOrchid;
+}
+
+.medTarget.two{
+	top: 400px;
+	left: 750px;
+	background-color: tomato;
+}
+
+.medTarget.three{
+	top:350px;
+	left: 325px;
+	background-color: steelblue;
+}
+
+.medTarget.four{
+	top: 250px;
+	left: 550px;
+	background-color: maroon;
+}
+
+/*Small Targets*/
+
+.smTarget.one{
+	top: 450px;
+	left: 550px;
+	background-color: SaddleBrown;
+}
+
+.smTarget.two{
+	top: 150px;
+	left: 0px;
+	background-color: seagreen;
+}
+
+.smTarget.three{
+	top: 200px;
+	left: 200px;
+	background-color: mistyrose;
+}
+
+
+/*Tiny Targets*/
+
+.tinyTarget.one{
+	left: 910px;
+}
+
+.tinyTarget.two{}

@@ -1,7 +1,7 @@
-/*
-[id*="wave"], [class*="pirhana"], [id*="man"], #help, #directions {
+
+[id*="wave"], [id*="man"], #help, #directions {
 	opacity: 0;
-}*/
+}
 
 /*big ol everything selectors!!*/
 /*#pirhanaContainer1, #ffishContainer1, #boatContainer, 
@@ -16,20 +16,13 @@
 	position: absolute;	
 }
 
-
 .flip{
-	z-index: 360;
 	-webkit-transform: scaleX(-1);
 }
 
-/*#man_rightArm, #man_leftArm, #man_mouth, #man_stache, #man_eyeOpen
-{
-	position: relative;
-}
-*/
 /*Boat guy positioning*/
 
-#boatContainer{
+#manContainer{
 	top: 120px;
 	left: 445px;
 	z-index: 600;
@@ -247,28 +240,28 @@ For some reason this isn't selecting the front container, hence its inclusion*/
 	-webkit-transform-origin: 500% 3500%;
 }
 
-#flyingFishOne{
+#flyingFish1{
 	top:250px;
 	left:1000px;
 	z-index: 860;
-	-webkit-animation: fly 5s linear infinite;
+/*	-webkit-animation: fly 5s linear infinite;*/
 }
 
-#flyingFishOne .ffish_FrontContainer{
+/*#flyingFish1 .ffish_FrontContainer{
 	-webkit-animation: straighten 5s linear infinite;
-}
+}*/
 
-#flyingFishTwo{
+#flyingFish2{
 	top:150px;
 	left:20px;
 	z-index: 360;
-	-webkit-animation: fly 7s .8s linear infinite;
+/*	-webkit-animation: fly 7s .8s linear infinite;*/
 }
 
-#flyingFishTwo .ffish_FrontContainer{
+/*#flyingFish2 .ffish_FrontContainer{
 	-webkit-animation: straighten 7s .8s linear infinite;
 }
-
+*/
 .ffish_MiddleContainer, .ffish_BackContainer{
 	-webkit-animation: turbulence .5s linear infinite;
 }
@@ -375,17 +368,20 @@ For some reason this isn't selecting the front container, hence its inclusion*/
 }
 
 @-webkit-keyframes pirhanaLowJump{
-	70% {top: 600px;
+	0%, 30%, 60%, 90%
+		 {top: 600px;
 		 -webkit-animation-timing-function: cubic-bezier(.02, 1.01, .99, 1.01);}
-	80% {top: 150px;
+	10%, 70% 
+		{top: 150px;
 		 -webkit-animation-timing-function: cubic-bezier(.69, .01, .88, .29);}	
-	90% {top: 600px;}
+	20%, 80% {top: 600px;}
 }
 
 @-webkit-keyframes pirhanaHighJump{
-	70% {top: 600px;
+	0%, 30%, 60%, 90% {top: 600px;
 		 -webkit-animation-timing-function: cubic-bezier(.02, 1.01, .99, 1.01);}
-	80% {top: 50px;
+	10%, 70% {top: 50px;
 		 -webkit-animation-timing-function: cubic-bezier(.69, .01, .88, .29);}	
-	90% {top: 600px;}
+	20%, 80% {top: 600px;}
 }
+
