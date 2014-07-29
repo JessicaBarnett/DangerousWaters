@@ -1,0 +1,52 @@
+   
+/*fluid grid with no gutters.  column numbers in each row must add up to 16*/
+* {
+    /*set base font size to 16 so em values will be accurate*/
+    font-size: 16px;
+    /*all padding and borders added will cut into the width, not add to it*/
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.column{    position: relative;}
+
+.container               { width: 100%;
+                           height: 10rem;      }
+
+
+/*horizontal layout*/
+.one.column,
+.one.columns             { width: 6.25%;     }
+.two.columns             { width: 12.5%;     }
+.three.columns           { width: 18.75%;    }
+.four.columns            { width: 25%;       }
+.five.columns            { width: 31.25%;    }
+.six.columns             { width: 37.5%;     }
+.seven.columns           { width: 43.75%;    }
+.eight.columns           { width: 50%;       }
+.nine.columns            { width: 56.25%;    }
+.ten.columns             { width: 62.5%;     }
+.eleven.columns          { width: 68.75%;    }
+.twelve.columns          { width: 75%;       }
+.thirteen.columns        { width: 81.25%;    }
+.fourteen.columns        { width: 87.5%;     }
+.fifteen.columns         { width: 93.75%;    }
+.sixteen.columns         { width: 100%;      }
+
+/*vertical layout*/
+.single.row,
+.single.rows             { height: .625rem;     }
+.double.rows             { height: 1.25rem;     }
+
+
+
+.column, .columns{
+    background-color: red;
+}
+
+.row, .rows{
+    clear: both;
+    background-color: pink;
+}
+

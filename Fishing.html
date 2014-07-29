@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Gone Fishing!</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/grid.css">
+		<link rel="stylesheet" type="text/css" href="css/fishing.css">
+	</head>
+
+
+	<body>
+
+		<div class="wrap">
+			<!--6 x 8 grid containing targets which activate animations-->
+			<div class="container">
+				<!--first row-->
+				<div class="row">
+					<div class="one columns"><p></p></div>
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><p></p></div>
+					<div class="one columns"><div class="smTarget bottomLeft"></div></div>
+					<div class="two columns"><p></p></div>
+					<div class="one column"><div class="smTarget topRight"></div></div>
+					<div class="one column"><p></p></div>
+				</div>
+				<!--second row-->
+				<div class="row">
+					<div class="two columns"><p></p></div>
+					<div class="one columns"><div class="smTarget topRight"></div></div>
+					<div class="one columns"><div class="smTarget bottomLeft"></div></div>
+					<div class="one columns"><p></p></div>
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="two columns"><p></p></div>
+				</div>
+				<!--third row-->				
+				<div class="row">
+					<div class="one column"><p></p></div>
+					<div class="one columns"><div class="smTarget topRight"></div></div>
+					<div class="one columns"><div class="smTarget bottomLeft"></div></div>
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><div class="smTarget topRight"></div></div>
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one column"><p></p></div>
+					<div class="one columns"><div class="smTarget bottomLeft"></div></div>
+				</div>
+				<!--fourth row-->
+				<div class="row">
+					<div class="one columns"><div class="lgTarget"></div></div>	
+					<div class="one column"><p></p></div>				
+					<div class="one columns"><div class="smTarget bottomLeft"></div></div>
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one column"><p></p></div>
+					<div class="one columns"><div class="smTarget topRight"></div></div>					
+					<div class="one columns"><div class="lgTarget"></div></div>
+				</div>
+				<!--fifth row-->
+				<div class="row">
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><div class="smTarget bottomLeft"></div></div>	
+					<div class="one columns"><div class="smTarget topRight"></div></div>	
+					<div class="one columns"><div class="smTarget bottomLeft"></div></div>	
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><div class="smTarget bottomRight"></div></div>		
+					<div class="one columns"><div class="smTarget topRight"></div></div>					
+					<div class="one columns"><div class="lgTarget"></div></div>
+				</div>
+				<!--sixth row-->
+				<div class="row">
+					<div class="one columns"><div class="smTarget topRight"></div></div>	
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><div class="smTarget topRight"></div></div>	
+					<div class="one columns"><div class="lgTarget"></div></div>
+					<div class="one columns"><div class="smTarget bottomRight"></div></div>	
+					<div class="one columns"><div class="smTarget topleft"></div></div>	
+				</div>		
+
+				<!--background layers for animation-->
+				<div class="scene container">
+					<div class="wrap">
+						<svg version="1.1" id="wave_topPointTall" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+							<path fill="none" stroke="#000000" d="M200,35.5"/>
+							<path fill="none" stroke="#000000" d="M0,35.403"/>
+							<path fill="none" stroke="#000000" d="M200,38.169"/>
+							<path fill="none" stroke="#000000" d="M0,38.057"/>
+							<path fill="none" stroke="#000000" d="M91,73.5"/>
+							<path fill="none" stroke="#000000" d="M200,26.565"/>
+							<path fill="none" stroke="#000000" d="M0,26.676"/>
+							<path fill="#C5FBFC" d="M150,41.01c12.112,0,25.001-23.778,25.001-23.778S189.889,40.897,200,40.897V200H0V41.342
+								c12.111,0,25-24.111,25-24.111S37.89,41.01,50,41.01 M100,41.01c-12.112,0-25-23.778-25-23.778S62.111,41.01,50,41.01 M100,41.01c12.111,0,25-23.778,25-23.778s12.889,23.778,25,23.778"/>
+						</svg>
+						<svg version="1.1" id="wave_topPointShort" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+							<path fill="none" stroke="#000000" d="M200,35.5"/>
+							<path fill="none" stroke="#000000" d="M0,35.403"/>
+							<path fill="none" stroke="#000000" d="M200,38.169"/>
+							<path fill="none" stroke="#000000" d="M0,38.057"/>
+							<path fill="none" stroke="#000000" d="M91,73.5"/>
+							<path fill="none" stroke="#000000" d="M200,26.565"/>
+							<path fill="none" stroke="#000000" d="M0,26.676"/>
+							<path fill="#85C2F9" d="M200,15.39 M0,15.511 M200,31.017c-10.111,0-24.999-15.505-24.999-15.505S162.111,31.138,150,31.138
+								s-24.999-15.627-24.999-15.627S112.111,31.138,100,31.138c-12.11,0-25-15.627-25-15.627S62.111,31.138,50,31.138
+								c-12.11,0-25-15.627-25-15.627s-12.888,15.99-25,15.99V200h200V31.017z"/>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

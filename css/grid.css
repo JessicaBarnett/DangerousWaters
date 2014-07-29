@@ -1,0 +1,58 @@
+/*all padding and borders added will cut into the width, not add to it*/
+* {    
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*fluid grid with no gutters.  column numbers in each row must add up to 16*/
+
+.container               { width: 960px;
+                           height: 600px;      
+                           border: 2px solid blue;}
+.column, .columns        {position: relative;  
+                          float: right;}
+/*horizontal layout*/
+.one.column,
+.one.columns             { width: 120px;     }
+.two.columns             { width: 240px;     }
+.three.columns           { width: 360px;     }
+.four.columns            { width: 480px;     }
+.five.columns            { width: 600px;     }
+.six.columns             { width: 720px;     }
+.seven.columns           { width: 840px;     }
+.eight.columns           { width: 960px;     }
+
+/*vertical layout*/
+.row                     { height: 100px;     }
+
+.row.column:last-child, .row.columns:last-child{
+    clear: both;
+}
+
+/*none of these classes are working properly.  Something to do with 
+the nested positioning schemes?  Parent and child are both relative...*/
+.bottomLeft{
+    bottom: 0;
+    left: 0;
+}
+.bottomRight{
+    bottom: 0;
+    right: 0;
+}
+.topLeft{
+    top: 0;
+    left: 0;
+}
+.topRight{
+    top: 0;
+    right: 0;
+}
+
+
+/*classes to help me visualize as I go*/
+/*
+.column, .columns    {    border-right: 2px solid green;      }
+.row                 {    border-bottom: 2px solid green;     }
+*/
+
