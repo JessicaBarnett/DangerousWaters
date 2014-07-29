@@ -1,8 +1,7 @@
-/*hide selectors*//*
-[id*="wave"], #boatContainer, #bubble, #pirhanaContainer1{
-	opacity: 0;
 
-}*/
+#pirhanaContainer1{
+	opacity: 1;
+}
 
 /*big ol everything selectors!!*/
 #pirhanaContainer1, #ffishContainer1, #boatContainer, .ffish_TailFinContainer, .ffish_FinContainer, .ffish_body{
@@ -80,11 +79,9 @@
 /*boat guy keyframes*/
 
 @-webkit-keyframes boatBounce{
-	0%{-webkit-tranform: translateY(0px) rotate(0deg);}
 	25%{-webkit-transform:translateY(-10px) rotate(5deg);}
 	50%{-webkit-tranform: translateY(0px) rotate(0deg);}
 	75%{-webkit-transform:translateY(10px) rotate(-5deg);}
-	100%{-webkit-tranform: translateY(0px) rotate(0deg);}
 }
 
 @-webkit-keyframes armWaveRight{
@@ -122,24 +119,37 @@
 	92% {opacity: 0; -webkit-transform: translateY(0);}
 }
 
-/*speech bubble*/
+/*speech bubbles*/
 
-#bubble {
+#help, #directions {
 	position: relative;
-	z-index: 166;
+	z-index: 550;
 	top: 130px; 
 	left: 300px;
 	width: 30%;
 	height: 30%;
 	opacity: 0;
-	/*-webkit-animation: yellBubble 5s linear infinite;*/
+	-webkit-animation: yellBubble 10s linear infinite;
+}
+
+#directions{
+	top: 130px; 
+	left: 8px;
+	-webkit-animation: yellBubble 10s 5s linear infinite;
+}
+
+@-webkit-keyframes yellBubbleShort{
+	0%, 100% {opacity:0;}
+	68% {opacity: 0; }
+	79% {opacity: 1;}
+	90% {opacity: 0; -webkit-transform: translate(-180px, -120px)}
 }
 
 @-webkit-keyframes yellBubble{
 	0%, 100% {opacity:0;}
-	70% {opacity: 0; }
-	75% {opacity: 1;}
-	90% {opacity: 0; -webkit-transform: translate(-180px, -120px)}
+	79% {opacity: 0; }
+	82% {opacity: 1;}
+	95% {opacity: 0; -webkit-transform: translate(-180px, -120px)}
 }
 
 
@@ -196,28 +206,53 @@
 	top: 350px;
 	left: 1000px;
 	z-index: 860;
-	-webkit-transform-origin: -500% 2000%;/*-400% 600%;*/
-	-webkit-animation: fly 10s linear infinite;
+	-webkit-transform-origin: -500% 2000%;
+	-webkit-animation: fly 2s 3s linear infinite;
+}
+#ffishContainer2{
+	top: 200px;
+	left: 100px;
+	-webkit-transform-origin: -500% 2000%;
+	-webkit-animation: fly 2.5s linear infinite;
+}
+.flip{
+		z-index: 360;
+	-webkit-transform: scaleX(-1);
 }
 
 /*flying fish keyframes*/
 
 @-webkit-keyframes fly{
 	0% {-webkit-transform: rotate(0deg);}
-	100% {-webkit-transform: rotate(-360deg);}
+	100% {-webkit-transform: rotate(-80deg);}
 }
-/*
-@-webkit-keyframes turbulence{
-	0%, 100%, 50% {-webkit-transform: rotate(0deg);}
-	25% {-webkit-transform: rotate(-10deg);}
-	75% {-webkit-transform: rotate(10deg);}
-}*/
 
 /*pirhana positioning*/
+
 #pirhanaContainer1{
 	top: 600px;
+	left: 70px;
 	z-index: 850;
-	-webkit-animation: pirhanaLowJump 5s linear infinite;
+	-webkit-animation: pirhanaHighJump 5s 3s linear infinite;
+}
+
+#pirhanaContainer2{
+	top: 600px;
+	left: 250px;
+	z-index: 650;
+	-webkit-animation: pirhanaLowJump 5s 1s linear infinite;
+}
+#pirhanaContainer3{
+	top: 600px;
+	left: 450px;
+	z-index: 550;
+	-webkit-animation: pirhanaHighJump 5s 1.5s linear infinite;
+}
+#pirhanaContainer4{
+	top: 600px;
+	left: 630px;
+	z-index: 750;
+	-webkit-animation: pirhanaLowJump 5s 2.5s linear infinite;
 }
 
 .pirhana_body{
@@ -269,4 +304,3 @@
 		 -webkit-animation-timing-function: cubic-bezier(.69, .01, .88, .29);}	
 	90% {top: 600px;}
 }
-

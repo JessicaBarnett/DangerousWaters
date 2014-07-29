@@ -6,19 +6,16 @@
 }
 
 .layerable div{
-	/*makes children line up on top of each other*/
 	position: absolute;
 }
 
-.container { 
+.scene{
 	width: 960px;
     height: 600px;      
    	border: 2px solid blue;
-}
-
-.scene{
 	background: -webkit-linear-gradient(90deg, white, #E3F0FF), 
 				linear-gradient(90deg, white, #E3F0FF);
 	overflow: hidden;
 }
+
 
