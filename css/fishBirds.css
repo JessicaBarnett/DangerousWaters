@@ -1,0 +1,417 @@
+
+[class*="ffish"], [id*="Container"], [class*="pirhana"], [class*="gull"], [id*="gullContainer"], .makeFly, .flip{
+	position: absolute;	
+}
+
+.flip{
+	-webkit-transform: scaleX(-1);
+	z-index: 300;
+}
+
+
+/*active gull positioning*/
+.makeFly {
+ 	-webkit-animation: turbulence .4s infinite;
+}
+
+
+/*gull containers*/
+
+[id*="gullContainer"]{
+	z-index: 10;
+	-webkit-perspective: 800px;
+ 	-webkit-perspective-origin: 50%;
+}
+
+[class*="WingContainer"]{
+	height: 100px;
+	width: 100px;
+	-webkit-transform-origin: 50% 113%;
+	-webkit-transform-style: preserve-3d; 
+	-webkit-backface-visibility: hidden;
+	transition: all 1s ease-in;
+	-webkit-animation: flap 8s infinite;
+}
+
+#gullContainer2 [class*="WingContainer"]{
+	-webkit-animation: flap 6s infinite;
+}
+
+#gullContainer3 [class*="WingContainer"], 
+#gullContainer4 [class*="WingContainer"]{
+	-webkit-animation: fastFlap .4s infinite;
+}
+
+#gullContainer5 [class*="WingContainer"]{
+	-webkit-animation: fastFlap .3s infinite;
+}
+
+
+#gullContainer1{
+	top: 100px;
+	left: 930px;	
+	/*-webkit-animation: fly 7s 5s infinite;*/
+}
+
+#gullContainer2{
+	top: 150px;
+	left: 50px;
+/*	-webkit-animation: fly 9s 3s infinite;*/
+}
+
+#gullContainer3, #gullContainer4, #gullContainer5{
+	opacity: 1;
+}
+
+#gullContainer3{
+	top: -30px;
+	left: 600px;
+	-webkit-transform: rotate(-80deg);
+}
+#gullContainer4{
+	top: -30px;
+	left: 100px;
+	-webkit-transform: rotate(-30deg);
+}
+#gullContainer5{
+	top: -30px;
+	left: 920px;
+	-webkit-transform: rotate(-60deg);
+}
+
+
+/*gull components*/
+
+.gull_body{
+	z-index: 0;
+}
+
+.gull_frontWingContainer{
+	top: -95px;
+	left: 70px;
+}
+
+.gull_backWingContainer{
+	top: -85px;
+	left: 52px;
+}
+
+.gull_frontWingContainer .gull_bottomWing, .gull_backWingContainer .gull_topWing
+/* the initially visible "front" side*/
+{
+	z-index: 100;
+
+}
+
+.gull_frontWingContainer .gull_topWing, .gull_backWingContainer .gull_bottomWing
+/*the initially-hidden "back" side*/
+{
+	z-index: -100;
+	-webkit-transform: translateZ(-1px);
+}
+
+
+
+.gull_backWingContainer .gull_topWing, .gull_backWingContainer .gull_bottomWing{
+	-webkit-transform: rotateZ(-10deg);
+	left: -10px;
+	top: -5px;
+}
+
+
+/*gull keyframes*/
+
+@-webkit-keyframes fly {
+	/*this only works when its above the other sets of keyframes...?*/
+	0% {opacity: 1;}
+	30% {-webkit-transform: translateX(-1200px);
+		 opacity: 1;}
+	31% {opacity: 0;}
+	100% {opacity: 0;}
+}
+
+@-webkit-keyframes gullOneSave{
+	0%  {opacity: 1;
+		 z-index:800;}
+	50% {-webkit-transform:translate(-350px, 200px); }
+	99% {-webkit-transform: translate(-400px, -500px);
+		 opacity: 1;
+		 z-index:800;} 
+	100% {opacity: 0;}
+}
+
+@-webkit-keyframes gullTwoSave{
+	0%  {opacity: 1;
+		 z-index:-800;}
+	50% {-webkit-transform:translate(-700px, 200px); }
+	99% {-webkit-transform: translate(-650px, -500px);
+		 opacity: 1;
+		 z-index:800;} 
+	100% {opacity: 0;}
+}
+
+@-webkit-keyframes gullThreeSave{
+	0%  {opacity: 1;
+		 z-index:800;}
+	50% {-webkit-transform:translate(-50px, 400px); }
+	99% {-webkit-transform: translate(-100px, -200px);
+		 opacity: 1;
+		 z-index:800;} 
+	100% {opacity: 0;}
+}
+
+@-webkit-keyframes gullFourSave{
+	0%  {opacity: 1;
+		 z-index:800;}
+	50% {-webkit-transform:translate(-700px, 400px); }
+	99% {-webkit-transform: translate(-650px, -200px);
+		 opacity: 1;
+		 z-index:800;} 
+	100% {opacity: 0;}
+}
+
+@-webkit-keyframes gullFiveSave{
+	0%  {opacity: 1;
+		 z-index:800;}
+	50% {-webkit-transform:translate(-300px, 400px); }
+	99% {-webkit-transform: translate(-350px, -200px);
+		 opacity: 1;
+		 z-index:800;} 
+	100% {opacity: 0;}
+}
+
+@-webkit-keyframes boatSave{
+	0% {opacity: 1;}
+	40%{-webkit-transform:translate(0px, -10px) rotate(5deg);}
+	45%{-webkit-tranform: translate(-10px, 0px) rotate(0deg);}
+	50%{-webkit-transform:translate(0px, 10px) rotate(-5deg);}
+	99% {-webkit-transform: translate(-10px, -550px);
+		opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@-webkit-keyframes flap{
+	0%, 18% {-webkit-transform: rotateX(0deg);}
+	9%, 27% {-webkit-transform: rotateX(15deg);}
+	35%, 45%, 55%, 65% {-webkit-transform: rotateX(130deg);}
+	40%, 50%, 60% {-webkit-transform: rotateX(30deg);}
+	100% {-webkit-transform: rotateX(0deg);}
+}
+
+@-webkit-keyframes fastFlap{
+	0%, 100% {-webkit-transform: rotateX(30deg);}
+	50%	 {-webkit-transform: rotateX(150deg);}
+}
+
+@-webkit-keyframes turbulence
+{/*can't use transform property in a comma-separated list of 
+animations, so translateX won't work here.*/
+	0%, 50%, 100%   {-webkit-transform: translateY(3px);}
+	25%, 75%  {-webkit-transform: translateY(-3px);}
+}
+
+
+
+/*flying fish positioning*/
+
+
+/*	the three absolutely-positioned containers need a height/width 
+set to make trasform-origin & border/bg colors work.  Nested Images
+seem to be set to the width of their contents by default, and don't 
+need this extra step.
+For some reason this isn't selecting the front container, hence its inclusion*/
+[class*="ffish"] [class*="Container"], .ffish_FrontContainer, [id*="flyingFish"]{
+	height: 100px;
+	width: 100px;
+}
+
+.ffish_FrontContainer{
+	-webkit-transform-origin: 0% 0%;
+	-webkit-transform: rotate(-20deg);
+}
+
+.ffish_MiddleContainer{
+	top: 18px;
+	left: 45px;
+	z-index: 30;
+	-webkit-transform-origin: 15% 10%;
+	-webkit-transform: rotate(10deg);
+}
+
+.ffish_BackContainer{
+	top: 40px;
+	left: 80px;
+	z-index: 30;
+	-webkit-transform-origin: 8% 10%;
+	-webkit-transform: rotate(10deg);
+}
+
+.ffish_head{
+	z-index: 80;
+}  
+.ffish_frontfin{
+	top: 40px;
+	left: 50px;
+	z-index: 100;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(60deg);
+} 
+.ffish_backfin{
+	top: 20px;
+	left: 65px;
+	z-index: 40;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(-90deg);
+}
+
+.ffish_body{
+	z-index: 30;
+}
+
+.ffish_tail{
+	z-index: 70;
+} 
+.ffish_frontdorsal{
+	top:20px;
+	left:0px;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(60deg);
+	z-index: 90;
+} 
+.ffish_backdorsal{
+	top: 0px;
+	left: 15px;
+	-webkit-transform-origin: 0 0;
+	-webkit-transform: rotate(-90deg);
+	z-index: 50;
+} 
+
+
+[id*="flyingFish"]{
+	-webkit-transform-origin: 500% 3500%;
+}
+
+#flyingFish1{
+	top:250px;
+	left:1000px;
+	z-index: 860;
+}
+
+#flyingFish2{
+	top:150px;
+	left:20px;
+}
+
+.ffish_MiddleContainer, .ffish_BackContainer{
+	-webkit-animation: fishTurbulence .5s linear infinite;
+}
+
+.ffish_backfin, .ffish_backdorsal{
+	-webkit-animation: backFinFlap .25s linear infinite;
+}
+
+.ffish_frontfin, .ffish_frontdorsal{
+	-webkit-animation: frontFinFlap .25s linear infinite;
+}
+
+/*flying fish keyframes*/
+
+@-webkit-keyframes fishFly{
+	0% {-webkit-transform: rotate(0deg);}
+	100% {-webkit-transform: rotate(-90deg);}
+}
+
+@-webkit-keyframes fishTurbulence{
+	0%, 100%{-webkit-transform: rotate(5deg);}
+	50%{-webkit-transform: rotate(-5deg);}
+}
+
+@-webkit-keyframes frontFinFlap{
+	0%, 100%{-webkit-transform: rotate(60deg);}
+	50%{-webkit-transform: rotate(40deg);}
+}
+
+@-webkit-keyframes backFinFlap{
+	0%, 100%{-webkit-transform: rotate(-90deg);}
+	50%{-webkit-transform: rotate(-70deg);}
+}
+
+
+
+/*pirhana positioning*/
+
+#pirhanaContainer1{
+	top: 600px;
+	left: 70px;
+	z-index: 850;
+}
+
+#pirhanaContainer2{
+	top: 600px;
+	left: 250px;
+	z-index: 650;
+}
+#pirhanaContainer3{
+	top: 600px;
+	left: 450px;
+	z-index: 550;
+}
+#pirhanaContainer4{
+	top: 600px;
+	left: 630px;
+	z-index: 750;
+}
+
+.pirhana_body{
+
+	top:80px;
+}
+
+.pirhana_jaw{
+	top: 30px;
+	left:70px;
+	-webkit-transform-origin: bottom left;
+	-webkit-transform: rotate(-10deg);
+	-webkit-animation: jawChomp .5s cubic-bezier(.16, .93, .99, 1.01) infinite;
+}
+.pirhana_head{
+	top: 10px;
+	left:15px;
+	-webkit-transform-origin: bottom right;
+	-webkit-transform: rotate(10deg);
+	-webkit-animation: headChomp .5s cubic-bezier(.16, .93, .99, 1.01) infinite;
+}
+.pirhana_fin{
+	top: 100px;
+	left:100px;
+}
+
+/*pirhana keyframes*/
+
+@-webkit-keyframes headChomp{
+	50% {-webkit-transform: rotate(-20deg);}
+}
+
+@-webkit-keyframes jawChomp{
+	50% {-webkit-transform: rotate(25deg);}
+}
+
+@-webkit-keyframes pirhanaLowJump{
+	0%, 30%, 60%, 90%
+		 {top: 600px;
+		 -webkit-animation-timing-function: cubic-bezier(.02, 1.01, .99, 1.01);}
+	10%, 70% 
+		{top: 150px;
+		 -webkit-animation-timing-function: cubic-bezier(.69, .01, .88, .29);}	
+	20%, 80% {top: 600px;}
+}
+
+@-webkit-keyframes pirhanaHighJump{
+	0%, 30%, 60%, 90% {top: 600px;
+		 -webkit-animation-timing-function: cubic-bezier(.02, 1.01, .99, 1.01);}
+	10%, 70% {top: 50px;
+		 -webkit-animation-timing-function: cubic-bezier(.69, .01, .88, .29);}	
+	20%, 80% {top: 600px;}
+}
+
+

@@ -5,29 +5,33 @@
     box-sizing: border-box;
 }
 
+body{
+	background: linen url("../images/tileable_wood_texture.png") repeat;
+}
+
 .layerable div{
 	position: absolute;
 }
-
 .scene{
 	position: relative;
 	width: 960px;
     height: 600px;   
-    margin: 30px;   
-   	border: 2px solid blue;
+    margin: 35px auto 35px auto;   
+   	border: 35px ridge gold;
+   	box-shadow: 4px .5 black;
 	background: -webkit-linear-gradient(90deg, white, #E3F0FF), 
 				linear-gradient(90deg, white, #E3F0FF);
-	/*overflow: hidden;*/
+	overflow: hidden;
 }
 
 /*General Target Styles*/
 
 [class*="Target"]{
 	border-radius: 25%;
-	background-color: chartreuse;
 	z-index: 1050;
 	position: absolute;
-	opacity:0;
+/*	background-color: green;*/
+	opacity: 0;
 }
 
 .lgTarget{
@@ -38,19 +42,16 @@
 .medTarget{
 	height: 200px;
 	width: 200px;
-	background-color: DodgerBlue;
 }
 
 .smTarget{
 	height: 150px;
 	width: 150px;
-	background-color: RosyBrown;
 }
 
 .tinyTarget{
 	height: 50px;
 	width: 50px;
-	background-color: sienna;
 }
 
 /*Large Targets*/
@@ -71,25 +72,21 @@
 
 .medTarget.one{
 	left: 100px;
-	background-color: MediumOrchid;
 }
 
 .medTarget.two{
 	top: 400px;
 	left: 750px;
-	background-color: tomato;
 }
 
 .medTarget.three{
 	top:350px;
 	left: 325px;
-	background-color: steelblue;
 }
 
 .medTarget.four{
 	top: 250px;
 	left: 550px;
-	background-color: maroon;
 }
 
 /*Small Targets*/
@@ -97,26 +94,22 @@
 .smTarget.one{
 	top: 450px;
 	left: 550px;
-	background-color: SaddleBrown;
 }
 
 .smTarget.two{
 	top: 150px;
 	left: 0px;
-	background-color: seagreen;
 }
 
 .smTarget.three{
 	top: 200px;
 	left: 200px;
-	background-color: mistyrose;
 }
 
 
 /*Tiny Targets*/
 
-.tinyTarget.one{
-	left: 910px;
+.tinyTarget.two{
+	top: 350px;
+	left: 850px;
 }
-
-.tinyTarget.two{}

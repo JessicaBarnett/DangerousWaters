@@ -3,12 +3,25 @@
 <html>
 
 	<head>
-		<title>Gone Fishing!  ::: version 8</title>
+		<title>Gone Fishing!  ::: version 9</title>
 		<meta charset="utf-8"></meta>
 		<link rel="stylesheet" type="text/css" href="css/grid.css">
-		<link rel="stylesheet" type="text/css" href="css/waves.css">
-		<link rel="stylesheet" type="text/css" href="css/puppets.css">
+		<link rel="stylesheet" type="text/css" href="css/wavesClouds.css">
+		<link rel="stylesheet" type="text/css" href="css/fishBirds.css">
+		<link rel="stylesheet" type="text/css" href="css/boatSharkBubble.css">
 		<link rel="stylesheet" type="text/css" href="css/interactive.css">
+		<style>
+/*			[id*="wave"], [id*="man"], #help, #directions, [id*="pirhanaContainer"], [id*="flyingFish"], #sharkContainer 
+			.scene{
+				overflow: visible;
+			}*/
+
+			[id*="wave"]
+			{
+				opacity: 0;
+			}
+
+		</style>
 	</head>
 
 
@@ -27,6 +40,88 @@
 				<div class="smTarget three"></div>
 				<div class="tinyTarget one"></div>
 				<div class="tinyTarget two"></div>
+
+				<div id="sharkContainer">
+					<img class="shark" src="svg/shark.svg" alt="shark">
+				</div>
+
+				<div id="gullContainer1">
+					<div class="makeFly">
+						<div class="gull_backWingContainer">
+							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+							<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+						</div>
+						<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
+						<div class="gull_frontWingContainer">
+							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+							<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+						</div>
+					</div>
+				</div>
+
+				<div class="flip">
+					<div id="gullContainer2">
+						<div class="makeFly">
+							<div class="gull_backWingContainer">
+								<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+								<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+							</div>
+							<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
+							<div class="gull_frontWingContainer">
+								<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+								<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="gullContainer3">
+					<div class="makeFly">
+						<div class="gull_backWingContainer">
+							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+							<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+						</div>
+						<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
+						<div class="gull_frontWingContainer">
+							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+							<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+						</div>
+					</div>
+				</div>
+
+				<div class="flip">
+					<div id="gullContainer4">
+						<div class="makeFly">
+							<div class="gull_backWingContainer">
+								<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+								<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+							</div>
+							<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
+							<div class="gull_frontWingContainer">
+								<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+								<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="gullContainer5">
+					<div class="makeFly">
+						<div class="gull_backWingContainer">
+							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+							<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+						</div>
+						<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
+						<div class="gull_frontWingContainer">
+							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
+							<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
+						</div>
+					</div>
+				</div>
+
+				<div id="nessie">
+					
+				</div>
 
 				<div id="pirhanaContainer1">
 					<img class="pirhana_body" src="svg/pirhana_body.svg" alt="pirhana body">
@@ -103,6 +198,10 @@
 				<div id="wave6">&nbsp</div>
 				<div id="wave7">&nbsp</div>
 				<div id="wave8">&nbsp</div>
+
+
+				<div id="cloud1"><img class="cloud" src="svg/cloud.svg" alt="cloud"></div>
+				<div id="cloud2"><img class="cloud" src="svg/cloud.svg" alt="cloud"></div>
 
 			</div>
 		</div>

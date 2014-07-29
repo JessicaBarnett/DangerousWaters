@@ -1,26 +1,12 @@
-
-/*	Ids
-	pirhanaContainer1-4
-	flyingFish1 & 2
-
-	Pirhana
-	-webkit-animation: pirhanaHighJump 5s 1.5s linear infinite;
-	-webkit-animation: pirhanaLowJump 5s 1.5s linear infinite;
-
-	Flying Fish
-	-webkit-animation: fly 7s .8s linear infinite; (to main fish container)
-	-webkit-animation: straighten 7s .8s linear infinite; (to first child of fish container)
-*/
-
-
-/*lgTarget one*/
-.lgTarget.one:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
+[class*=Target]:hover{
+	background-color: blue;
+	opacity: .2;
 }
 
-.lgTarget.one:hover ~ #pirhanaContainer4{
-	-webkit-animation: pirhanaHighJump 4s linear infinite;
+/*lg target one*/
+
+.lgTarget.one:hover ~ #gullContainer1{
+	-webkit-animation: fly 7s infinite;
 }
 
 .lgTarget.one:hover ~ #pirhanaContainer3{
@@ -31,29 +17,17 @@
 	-webkit-animation: pirhanaLowJump 4s .25s linear infinite;
 }
 
-/*lg target two*/
-.lgTarget.two:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
+/*lg target two - SHARK ATTACK!!!*/
+
+.lgTarget.two:hover ~ #sharkContainer .shark{
+	-webkit-animation: sharkAttack 3s;
 }
 
-.lgTarget.two:hover ~ #pirhanaContainer2{
-	-webkit-animation: pirhanaHighJump 3s linear infinite;
-}
-
-.lgTarget.two:hover ~ #pirhanaContainer1{
-	-webkit-animation: pirhanaHighJump 5s .75s linear infinite;
-}
-
-.lgTarget.two:hover ~ #pirhanaContainer4{
-	-webkit-animation: pirhanaLowJump 8s .02s linear infinite;
+.lgTarget.two:hover ~ #manContainer{
+	-webkit-animation: sink 3s;
 }
 
 /*lg target three*/
-.lgTarget.three:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
-}
 
 .lgTarget.three:hover ~ #pirhanaContainer2{
 	-webkit-animation: pirhanaHighJump 2s linear infinite;
@@ -68,60 +42,45 @@
 }
 
 /*med target one*/
-.medTarget.one:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
-}
 
 .medTarget.one:hover ~ #pirhanaContainer2{
 	-webkit-animation: pirhanaHighJump 4s .1s linear infinite;
 }
 
-.medTarget.one:hover ~ #pirhanaContainer1{
-	-webkit-animation: pirhanaLowJump 3s linear infinite;
+.medTarget.one:hover ~ .flip #flyingFish2{
+	-webkit-animation: fishFly 5s linear infinite;
 }
-
 
 /*med target two*/
-.medTarget.two:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
+
+
+.medTarget.two:hover ~ .flip #gullContainer2{
+	-webkit-animation: fly 5s infinite;
 }
 
-.medTarget.two:hover ~ #pirhanaContainer4{
-	-webkit-animation: pirhanaLowJump 2s linear infinite;
+.medTarget.two:hover ~ #gullContainer1{
+	-webkit-animation: fly 7s infinite;
 }
 
-.medTarget.two:hover ~ #pirhanaContainer3{
-	-webkit-animation: pirhanaHighJump 4s .25s linear infinite;
-}
-
-.medTarget.two:hover ~ #pirhanaContainer1{
-	-webkit-animation: pirhanaHighJump 5s .5s linear infinite;
+.medTarget.two:hover ~ #flyingFish1{
+	-webkit-animation: fishFly 7s .3s linear infinite;
 }
 
 /*med target three*/
 
-.medTarget.three:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
+.medTarget.three:hover ~ .flip #flyingFish2{
+	-webkit-animation: fishFly 5s .3s linear infinite;
 }
 
-.medTarget.three:hover ~ #pirhanaContainer2{
-	-webkit-animation: pirhanaHighJump 5s linear infinite;
+.medTarget.three:hover ~ #flyingFish1{
+	-webkit-animation: fishFly 7s linear infinite;
 }
 
 .medTarget.three:hover ~ #pirhanaContainer3{
-	-webkit-animation: pirhanaLowJump 4s .25s linear infinite;
+	-webkit-animation: pirhanaHighJump 4s .25s linear infinite;
 }
-
 
 /*med target four*/
-
-.medTarget.four:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
-}
 
 .medTarget.four:hover ~ #pirhanaContainer3{
 	-webkit-animation: pirhanaHighJump 3s linear infinite;
@@ -131,41 +90,36 @@
 	-webkit-animation: pirhanaLowJump 3s .25s linear infinite;
 }
 
+.medTarget.four:hover ~ #flyingFish1{
+	-webkit-animation: fishFly 5s linear infinite;
+}
+
 /*sm target one*/
 
-.smTarget.one:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
+.smTarget.one:hover ~ #gullContainer1{
+	-webkit-animation: fly 6s infinite;
 }
 
-.smTarget.one:hover ~ #pirhanaContainer3{
-	-webkit-animation: pirhanaHighJump 5s linear infinite;
+.smTarget.one:hover ~ .flip #gullContainer2{
+	-webkit-animation: fly 5s .5s infinite;
 }
 
-.smTarget.one:hover ~ #pirhanaContainer2{
-	-webkit-animation: pirhanaLowJump 4s .25s linear infinite;
+.smTarget.one:hover ~ #flyingFish1{
+	-webkit-animation: fishFly 7s linear infinite;
 }
 
 /*sm target two*/
-
-.smTarget.two:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
-}
 
 .smTarget.two:hover ~ #pirhanaContainer1{
 	-webkit-animation: pirhanaHighJump 4s linear infinite;
 }
 
-.smTarget.two:hover ~ #pirhanaContainer2{
-	-webkit-animation: pirhanaLowJump 4s .06s linear infinite;
+.medTarget.two:hover ~ .flip #flyingFish2{
+	-webkit-animation: fishFly 5s linear infinite;
 }
 
+
 /*sm target three*/
-.smTarget.three:hover{
-	background-color: DodgerBlue;
-	border: 20px solid linen;
-}
 
 .smTarget.three:hover ~ #pirhanaContainer2{
 	-webkit-animation: pirhanaHighJump 4s linear infinite;
@@ -174,3 +128,50 @@
 .smTarget.three:hover ~ #pirhanaContainer4{
 	-webkit-animation: pirhanaLowJump 6s .5s linear infinite;
 }
+
+.smTarget.three:hover ~ .flip #gullContainer2{
+	-webkit-animation: fly 6s infinite;
+}
+
+
+/*tiny target one Seagull Escape!!*/
+
+.tinyTarget.one:hover ~ #gullContainer1 { 
+	-webkit-animation: gullOneSave 2.5s linear;
+
+}
+
+
+.tinyTarget.one:hover ~ .flip #gullContainer2 {
+	-webkit-animation: gullTwoSave 2.5s linear;
+}
+
+
+.tinyTarget.one:hover ~ #gullContainer3 {
+	-webkit-animation: gullThreeSave 2.5s linear;
+
+}
+
+.tinyTarget.one:hover ~ .flip #gullContainer4 {
+	-webkit-animation: gullFourSave 2.5s linear;
+
+}
+
+.tinyTarget.one:hover ~ #gullContainer5 {
+	-webkit-animation: gullFiveSave 2.5s linear;
+
+}
+
+.tinyTarget.one:hover ~ #manContainer {
+	-webkit-animation: boatSave 2.5s linear;
+}
+
+/*converts the two birds that were flying across screen before to fast-flap birds*/
+.tinyTarget.one:hover ~ .flip #gullContainer2 [class*="WingContainer"],
+.tinyTarget.one:hover ~ #gullContainer1 [class*="WingContainer"]
+ {	-webkit-animation: fastFlap .3s linear infinite; }
+
+
+
+
+/*tiny target two Nessie!!*/
