@@ -3,30 +3,30 @@
 <html>
 
 	<head>
-		<title>Gone Fishing!  ::: version 9</title>
+		<title>Dangerous Waters! ::: version 11</title>
 		<meta charset="utf-8"></meta>
-		<link rel="stylesheet" type="text/css" href="css/grid.css">
-		<link rel="stylesheet" type="text/css" href="css/wavesClouds.css">
-		<link rel="stylesheet" type="text/css" href="css/fishBirds.css">
-		<link rel="stylesheet" type="text/css" href="css/boatSharkBubble.css">
-		<link rel="stylesheet" type="text/css" href="css/interactive.css">
-		<style>
-/*			[id*="wave"], [id*="man"], #help, #directions, [id*="pirhanaContainer"], [id*="flyingFish"], #sharkContainer 
-			.scene{
-				overflow: visible;
-			}*/
-
-			[id*="wave"]
-			{
-				opacity: 0;
-			}
-
-		</style>
+ 		<link rel="stylesheet" type="text/css" href="css/allStyles.css"> 
+<!--  		<link rel="stylesheet" type="text/css" href="css/allStyles_noWaves.css">  -->
 	</head>
 
 
 	<body>
 		<div class="scene">
+			<div id="endgame">
+				<h1 class = "invisible lose">Aww, I got Eaten : (</h1> 
+	 			<h2 class="invisible lose"> See if you can save me next time! <br>
+					(hint: Check towards the top of the screen)</h2>
+	 			<h1 class = "invisible win">Yay!  You saved me!  Thanks!</h1> 
+	 			<h2 class = "invisible win">I came out here looking for the <br> 
+					Loch Ness Monster.  Shame I couldn't find her.<br>  Oh well. </h2> 
+
+	 			<h1 class = "invisible surprise">Wow! You found Nessie!!</h1> 
+	 			<h2 class = "invisible surprise">You deserve a cookie!  But I ate them all.<br>Sorry.</h2> 
+
+				<div class="invisible win lose surprise reset" onClick="reloadPage()">
+					<a href=#>Restart</a>
+				</div> 
+			</div>
 			<div class="layerable">
 				<div class="lgTarget one"></div>
 				<div class="lgTarget two"></div>
@@ -41,155 +41,6 @@
 				<div class="tinyTarget one"></div>
 				<div class="tinyTarget two"></div>
 
-				<div id="sharkContainer">
-					<img class="shark" src="svg/shark.svg" alt="shark">
-				</div>
-
-				<div id="gullContainer1">
-					<div class="makeFly">
-						<div class="gull_backWingContainer">
-							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-							<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-						</div>
-						<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
-						<div class="gull_frontWingContainer">
-							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-							<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-						</div>
-					</div>
-				</div>
-
-				<div class="flip">
-					<div id="gullContainer2">
-						<div class="makeFly">
-							<div class="gull_backWingContainer">
-								<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-								<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-							</div>
-							<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
-							<div class="gull_frontWingContainer">
-								<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-								<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div id="gullContainer3">
-					<div class="makeFly">
-						<div class="gull_backWingContainer">
-							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-							<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-						</div>
-						<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
-						<div class="gull_frontWingContainer">
-							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-							<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-						</div>
-					</div>
-				</div>
-
-				<div class="flip">
-					<div id="gullContainer4">
-						<div class="makeFly">
-							<div class="gull_backWingContainer">
-								<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-								<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-							</div>
-							<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
-							<div class="gull_frontWingContainer">
-								<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-								<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div id="gullContainer5">
-					<div class="makeFly">
-						<div class="gull_backWingContainer">
-							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-							<img class="gull_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-						</div>
-						<img class="gull_body" src="svg/gull_body.svg" alt="gull body">
-						<div class="gull_frontWingContainer">
-							<img class="gull_topWing" src="svg/gull_wing.svg" alt="gull wing">
-							<img class="gill_bottomWing" src="svg/gull_underwing.svg" alt="gull underwing">
-						</div>
-					</div>
-				</div>
-
-				<div id="nessie">
-					
-				</div>
-
-				<div id="pirhanaContainer1">
-					<img class="pirhana_body" src="svg/pirhana_body.svg" alt="pirhana body">
-					<img class="pirhana_jaw" src="svg/pirhana_jaw.svg" alt="pirhana jaw">
-					<img class="pirhana_head" src="svg/pirhana_head.svg" alt="pirhana head">
-					<img class="pirhana_fin" src="svg/pirhana_fin.svg" alt="pirhana fin">
-				</div>
-				<div id="pirhanaContainer2">
-					<img class="pirhana_body" src="svg/pirhana_body.svg" alt="pirhana body">
-					<img class="pirhana_jaw" src="svg/pirhana_jaw.svg" alt="pirhana jaw">
-					<img class="pirhana_head" src="svg/pirhana_head.svg" alt="pirhana head">
-					<img class="pirhana_fin" src="svg/pirhana_fin.svg" alt="pirhana fin">
-				</div>
-				<div id="pirhanaContainer3">
-					<img class="pirhana_body" src="svg/pirhana_body.svg" alt="pirhana body">
-					<img class="pirhana_jaw" src="svg/pirhana_jaw.svg" alt="pirhana jaw">
-					<img class="pirhana_head" src="svg/pirhana_head.svg" alt="pirhana head">
-					<img class="pirhana_fin" src="svg/pirhana_fin.svg" alt="pirhana fin">
-				</div>
-				<div id="pirhanaContainer4">
-					<img class="pirhana_body" src="svg/pirhana_body.svg" alt="pirhana body">
-					<img class="pirhana_jaw" src="svg/pirhana_jaw.svg" alt="pirhana jaw">
-					<img class="pirhana_head" src="svg/pirhana_head.svg" alt="pirhana head">
-					<img class="pirhana_fin" src="svg/pirhana_fin.svg" alt="pirhana fin">
-				</div>
-				<div id="flyingFish1">
-					<div class="ffish_FrontContainer">
-						<img class="ffish_frontfin" src="svg/ffish_frontfin.svg" alt="flying fish fin">
-						<img class="ffish_head" src="svg/ffish_head.svg" alt="flying fish head">
-						<img class="ffish_backfin" src="svg/ffish_backfin.svg" alt="flying fish fin">
-						<div class="ffish_MiddleContainer">
-							<img class="ffish_body" src="svg/ffish_body.svg" alt="flying fish body">
-							<div class="ffish_BackContainer">
-								<img class="ffish_frontdorsal" src="svg/ffish_frontdorsal.svg" alt="flying fish fin">
-								<img class="ffish_tail" src="svg/ffish_tail.svg" alt="flying fish tail">
-								<img class="ffish_backdorsal" src="svg/ffish_backdorsal.svg" alt="flying fish fin">
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="flip">
-					<div id="flyingFish2">
-						<div class="ffish_FrontContainer">
-							<img class="ffish_frontfin" src="svg/ffish_frontfin.svg" alt="flying fish fin">
-							<img class="ffish_head" src="svg/ffish_head.svg" alt="flying fish head">
-							<img class="ffish_backfin" src="svg/ffish_backfin.svg" alt="flying fish fin">
-							<div class="ffish_MiddleContainer">
-								<img class="ffish_body" src="svg/ffish_body.svg" alt="flying fish body">
-								<div class="ffish_BackContainer">
-									<img class="ffish_frontdorsal" src="svg/ffish_frontdorsal.svg" alt="flying fish fin">
-									<img class="ffish_tail" src="svg/ffish_tail.svg" alt="flying fish tail">
-									<img class="ffish_backdorsal" src="svg/ffish_backdorsal.svg" alt="flying fish fin">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<img id="help" src="svg/wordBubble.svg" alt="word bubble">
-				<img id="directions" src="svg/directionBubble.svg" alt="direction bubble">
-				<div id="manContainer">
-					<img id="man_leftArm" src="svg/man_leftArm.svg" alt="left arm">
-					<img id="man_rightArm" src="svg/man_rightArm.svg" alt="right arm">
-					<img id="man_boat" src="svg/boatMan.svg" alt="man in a boat">
-					<img id="man_mouth" src="svg/man_mouth.svg" alt="mouth">
-					<img id="man_stache" src="svg/man_stache.svg" alt="moustache">				
-					<img id="man_eyeOpen" src="svg/man_eyeopen.svg" alt="open eyes">
-				</div>
-
 				<div id="wave1">&nbsp</div>
 				<div id="wave2">&nbsp</div>
 				<div id="wave3">&nbsp</div>
@@ -200,10 +51,168 @@
 				<div id="wave8">&nbsp</div>
 
 
-				<div id="cloud1"><img class="cloud" src="svg/cloud.svg" alt="cloud"></div>
-				<div id="cloud2"><img class="cloud" src="svg/cloud.svg" alt="cloud"></div>
+				<div id="cloud1"><img class="cloud" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/cloud.svg" alt="cloud"></div>
+				<div class="flip">
+					<div id="cloud2"><img class="cloud" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/cloud.svg" alt="cloud"></div>
+				</div>
+				<div id="cloud3"><img class="cloud" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/cloud.svg" alt="cloud"></div>
+				<div class="flip">
+					<div id="cloud4"><img class="cloud" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/cloud.svg" alt="cloud"></div>
+				</div>
 
-			</div>
-		</div>
+
+				<div id="sharkContainer">
+					<img class="shark" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/shark.svg" alt="shark">
+				</div>
+
+				<div id="gullContainer1">
+					<div class="makeFly">
+						<div class="gull_backWingContainer">
+							<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+							<img class="gull_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+						</div>
+						<img class="gull_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_body.svg" alt="gull body">
+						<div class="gull_frontWingContainer">
+							<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+							<img class="gill_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+						</div>
+					</div>
+				</div>
+
+				<div class="flip">
+					<div id="gullContainer2">
+						<div class="makeFly">
+							<div class="gull_backWingContainer">
+								<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+								<img class="gull_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+							</div>
+							<img class="gull_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_body.svg" alt="gull body">
+							<div class="gull_frontWingContainer">
+								<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+								<img class="gill_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="gullContainer3">
+					<div class="makeFly">
+						<div class="gull_backWingContainer">
+							<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+							<img class="gull_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+						</div>
+						<img class="gull_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_body.svg" alt="gull body">
+						<div class="gull_frontWingContainer">
+							<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+							<img class="gill_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+						</div>
+					</div>
+				</div>
+
+				<div class="flip">
+					<div id="gullContainer4">
+						<div class="makeFly">
+							<div class="gull_backWingContainer">
+								<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+								<img class="gull_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+							</div>
+							<img class="gull_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_body.svg" alt="gull body">
+							<div class="gull_frontWingContainer">
+								<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+								<img class="gill_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="gullContainer5">
+					<div class="makeFly">
+						<div class="gull_backWingContainer">
+							<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+							<img class="gull_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+						</div>
+						<img class="gull_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_body.svg" alt="gull body">
+						<div class="gull_frontWingContainer">
+							<img class="gull_topWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_wing.svg" alt="gull wing">
+							<img class="gill_bottomWing" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/gull_underwing.svg" alt="gull underwing">
+						</div>
+					</div>
+				</div>
+
+				<div id="nessie">
+					<img class="nessie_head" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/nessie.svg" alt="The Loch Ness Monster">
+				</div>
+
+				<div id="pirhanaContainer1">
+					<img class="pirhana_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_body.svg" alt="pirhana body">
+					<img class="pirhana_jaw" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_jaw.svg" alt="pirhana jaw">
+					<img class="pirhana_head" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_head.svg" alt="pirhana head">
+					<img class="pirhana_fin" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_fin.svg" alt="pirhana fin">
+				</div>
+				<div id="pirhanaContainer2">
+					<img class="pirhana_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_body.svg" alt="pirhana body">
+					<img class="pirhana_jaw" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_jaw.svg" alt="pirhana jaw">
+					<img class="pirhana_head" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_head.svg" alt="pirhana head">
+					<img class="pirhana_fin" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_fin.svg" alt="pirhana fin">
+				</div>
+				<div id="pirhanaContainer3">
+					<img class="pirhana_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_body.svg" alt="pirhana body">
+					<img class="pirhana_jaw" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_jaw.svg" alt="pirhana jaw">
+					<img class="pirhana_head" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_head.svg" alt="pirhana head">
+					<img class="pirhana_fin" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_fin.svg" alt="pirhana fin">
+				</div>
+				<div id="pirhanaContainer4">
+					<img class="pirhana_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_body.svg" alt="pirhana body">
+					<img class="pirhana_jaw" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_jaw.svg" alt="pirhana jaw">
+					<img class="pirhana_head" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_head.svg" alt="pirhana head">
+					<img class="pirhana_fin" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/pirhana_fin.svg" alt="pirhana fin">
+				</div>
+				<div id="flyingFish1">
+					<div class="ffish_FrontContainer">
+						<img class="ffish_frontfin" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_frontfin.svg" alt="flying fish fin">
+						<img class="ffish_head" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_head.svg" alt="flying fish head">
+						<img class="ffish_backfin" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_backfin.svg" alt="flying fish fin">
+						<div class="ffish_MiddleContainer">
+							<img class="ffish_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_body.svg" alt="flying fish body">
+							<div class="ffish_BackContainer">
+								<img class="ffish_frontdorsal" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_frontdorsal.svg" alt="flying fish fin">
+								<img class="ffish_tail" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_tail.svg" alt="flying fish tail">
+								<img class="ffish_backdorsal" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_backdorsal.svg" alt="flying fish fin">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="flip">
+					<div id="flyingFish2">
+						<div class="ffish_FrontContainer">
+							<img class="ffish_frontfin" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_frontfin.svg" alt="flying fish fin">
+							<img class="ffish_head" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_head.svg" alt="flying fish head">
+							<img class="ffish_backfin" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_backfin.svg" alt="flying fish fin">
+							<div class="ffish_MiddleContainer">
+								<img class="ffish_body" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_body.svg" alt="flying fish body">
+								<div class="ffish_BackContainer">
+									<img class="ffish_frontdorsal" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_frontdorsal.svg" alt="flying fish fin">
+									<img class="ffish_tail" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_tail.svg" alt="flying fish tail">
+									<img class="ffish_backdorsal" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/ffish_backdorsal.svg" alt="flying fish fin">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img id="help" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/wordBubble.svg" alt="word bubble">
+				<img id="directions" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/directionBubble.svg" alt="direction bubble">
+				<div id="manContainer">
+					<img id="man_leftArm" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/man_leftArm.svg" alt="left arm">
+					<img id="man_rightArm" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/man_rightArm.svg" alt="right arm">
+					<img id="man_boat" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/boatMan.svg" alt="man in a boat">
+					<img id="man_mouth" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/man_mouth.svg" alt="mouth">
+					<img id="man_stache" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/man_stache.svg" alt="moustache">				
+					<img id="man_eyeOpen" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/man_eyeopen.svg" alt="open eyes">
+				</div>
+			</div><!-- layerable --> 
+		</div><!-- scene -->
+
+		<script type="text/javascript" src="https://dl.dropboxusercontent.com/u/95700218/dangerous_Waters/endgame.js"></script>
+
 	</body>
 </html>
