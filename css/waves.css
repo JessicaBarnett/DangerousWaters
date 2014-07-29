@@ -1,0 +1,109 @@
+/*wave selectors*/
+
+[id*="wave"]{
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
+}
+
+#wave1, #wave5, #wave8{	
+	background: url(../svg/wave_topPointShort.svg) no-repeat;
+	background-size: 180%, 180%;
+	-webkit-animation: firstWave 2s linear infinite;
+	z-index: 1000;
+}
+
+#wave2, #wave4, #wave7{
+	background: url(../svg/wave_topPointTall.svg) no-repeat;
+	background-size: 180%, 180%;
+	-webkit-animation: secondWave 3s linear infinite;
+	z-index: 900;
+}
+
+#wave3, #wave6{
+	background: url(../svg/wave_topPointGiant.svg) no-repeat;
+	background-size: 180%, 180%;
+	-webkit-animation: thirdWave 4s linear infinite;
+	z-index:800;
+}
+
+#wave4{
+	-webkit-animation: fourthWave 5s linear infinite;
+	z-index: 700;
+}
+
+#wave5{
+	-webkit-animation: fifthWave 7s linear infinite;
+	z-index: 500;
+}
+
+#wave6, #wave7, #wave8{
+	background-size: 130%;
+	-webkit-animation: sixthWave 1s linear infinite;
+	z-index: 400;
+}
+
+#wave7{
+	-webkit-animation: seventhWave 2s linear infinite;
+	z-index: 300;
+}
+
+#wave8{
+	-webkit-animation: eighthWave 3s linear infinite;
+	z-index: 200;
+}
+
+.fastBounce{
+	-webkit-animation: fastWaveBounce 3s ease-in-out infinite;
+}
+
+.slowBounce{
+	-webkit-animation: slowWaveBounce 3s ease-in-out infinite;
+}
+
+/*keyframes*/
+
+@-webkit-keyframes firstWave{
+	0%{background-position: -8px 480px}
+	100%{background-position: -650px 480px}
+}
+
+@-webkit-keyframes secondWave{
+	0%{background-position: -8px 400px}
+	100%{background-position: -650px 400px}
+}
+
+@-webkit-keyframes thirdWave{
+	0%{background-position: -8px 320px}
+	100%{background-position: -650px 320px}
+}
+
+@-webkit-keyframes fourthWave{
+	0%{background-position: -8px 290px}
+	100%{background-position: -650px 290px}
+}
+
+
+@-webkit-keyframes fifthWave{
+	0%{background-position: -8px 270px}
+	100%{background-position: -650px 270px}
+}
+
+/*shorter loop*/
+
+@-webkit-keyframes sixthWave{
+	0%{background-position: -8px 220px}
+	100%{background-position: -160px 220px}
+}
+
+@-webkit-keyframes seventhWave{
+	0%{background-position: -8px 200px}
+	100%{background-position: -160px 200px}
+}
+
+@-webkit-keyframes eighthWave{
+	0%{background-position: -8px 180px}
+	100%{background-position: -160px 180px}
+}
+
