@@ -6,15 +6,13 @@
 /*all padding and borders added will cut into the width, not add to it*/
 * {
     -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
     box-sizing: border-box;
 }
 
 /*General Styles*/
 
-body{
-	background: linen url("http://www.mediafire.com/view/6qf1de0i8bcyoxy/tileable_wood_texture.png") repeat;
-}
+body{}
 
 .scene{
 	position: relative;
@@ -23,7 +21,7 @@ body{
     margin: 35px auto 35px auto;
    	border: 35px ridge gold;
    	box-shadow: 4px .5 black;
-	background: -webkit-linear-gradient(90deg, white, #E3F0FF),
+	background: linear-gradient(90deg, white, #E3F0FF),
 				linear-gradient(90deg, white, #E3F0FF);
 	overflow: hidden;
 }
@@ -51,7 +49,7 @@ div.reset {
 	border-radius: 25px;
 	border: 4px groove rgb(136, 136, 136);
 	z-index: 3000;
-	-webkit-transition: all .5s;
+	transition: all .5s;
 }
 div.reset a{
 	text-decoration: none;
@@ -201,21 +199,21 @@ h2{
 }
 
 #wave1, #wave5, #wave8{
-	background: url(svg/wave_topPointShort.svg) no-repeat;
+	background: url(../svg/wave_topPointShort.svg) no-repeat;
 	background-size: 180%, 180%;
 	animation: firstWave 2s linear infinite;
 	z-index: 1000;
 }
 
 #wave2, #wave4, #wave7{
-	background: url(svg/wave_topPointTall.svg) no-repeat;
+	background: url(../svg/wave_topPointTall.svg) no-repeat;
 	background-size: 180%, 180%;
 	animation: secondWave 3s linear infinite;
 	z-index: 900;
 }
 
 #wave3, #wave6{
-	background: url(svg/wave_topPointGiant.svg) no-repeat;
+	background: url(../svg/wave_topPointGiant.svg) no-repeat;
 	background-size: 180%, 180%;
 	animation: thirdWave 4s linear infinite;
 	z-index:800;
@@ -366,8 +364,8 @@ h2{
 
 [id*="gullContainer"]{
 	z-index: 300;
-	-webkit-perspective: 800px;
- 	-webkit-perspective-origin: 50%;
+	perspective: 800px;
+ 	perspective-origin: 50%;
 }
 
 [class*="WingContainer"]{
@@ -375,7 +373,7 @@ h2{
 	width: 100px;
 	transform-origin: 50% 113%;
 	transform-style: preserve-3d;
-	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 	transition: all 1s ease-in;
 	animation: flap 8s infinite;
 }
@@ -537,7 +535,7 @@ h2{
 @keyframes boatSave{
 	0% {opacity: 1;}
 	40%{transform:translate(0px, -10px) rotate(5deg);}
-	45%{-webkit-tranform: translate(-10px, 0px) rotate(0deg);}
+	45%{tranform: translate(-10px, 0px) rotate(0deg);}
 	50%{transform:translate(0px, 10px) rotate(-5deg);}
 	99% {transform: translate(-10px, -550px);
 		opacity: 1;}
@@ -844,7 +842,7 @@ For some reason this isn't selecting the front container, hence its inclusion*/
 
 @keyframes boatBounce{
 	25%{transform:translateY(-10px) rotate(5deg);}
-	50%{-webkit-tranform: translateY(0px) rotate(0deg);}
+	50%{tranform: translateY(0px) rotate(0deg);}
 	75%{transform:translateY(10px) rotate(-5deg);}
 }
 
@@ -909,7 +907,7 @@ For some reason this isn't selecting the front container, hence its inclusion*/
 /*has to be 1/6th the time of sharkAttack, + a 5/6th delay, ish*/
 {
 	0%, 50%, 80% {transform:translateY(-10px) rotate(5deg);}
-	20%, 40%, 60% {-webkit-tranform: translateY(0px) rotate(0deg);}
+	20%, 40%, 60% {tranform: translateY(0px) rotate(0deg);}
 	30%, 70% {transform:translateY(10px) rotate(-5deg);}
 	75% {top: 120px;}
 	100% {top: 550px;}

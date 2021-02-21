@@ -1,8 +1,8 @@
 	var boat = document.getElementById("manContainer");
 			var nessie = document.getElementById("nessie");
 			/*wtf, I have to prefix javascript too???  grr...*/
-			boat.addEventListener("webkitAnimationEnd", endgame, false);
-			nessie.addEventListener("webkitAnimationEnd", endgame, false);
+			boat.addEventListener("animationend", endgame, false);
+			nessie.addEventListener("animationend", endgame, false);
 
 					// http://www.sitepoint.com/css3-animation-javascript-event-handlers/
 		// http://css-tricks.com/controlling-css-animations-transitions-javascript/
@@ -19,12 +19,12 @@
 				console.log(animationName);
 
 				if (animationName == "boatSave")
-				{		
+				{
 					console.log("sunk!");
 					addStyles(winCSS);
 				}
 				else if (animationName == "boatSink")
-				{	
+				{
 					console.log("saved!");
 					addStyles(loseCSS);
 				}
@@ -35,7 +35,7 @@
 				}
 				else
 				{	console.log("something else!");}
-				return;	
+				return;
 			}
 
 			function addStyles(style)
