@@ -3,10 +3,8 @@ DangerousWaters
 
 A simple game using css hover targets to activate animations
 
-Project is currently only working in chrome, and is not responsive at all.  I will work on adapting it for other browsers/devices when next I have time!
+This project is very old (2014), very silly, and maybe just a little bit embarassing.  It was mostly an experiment in using css to do flash-style puppet-animation with css animations, transforms, transitions, and svgs.
 
-Hosted on codepen with all the (performance dampening) frills: 
-      http://codepen.io/GreatPumpkin/full/zrGlo
+There are 3 possible outcomes to this "game" - Shark, seagulls, and nessie.  See if you can find them all?
 
-And here's another version with the wave animation turned off, to improve performance:
-      http://codepen.io/GreatPumpkin/full/Hdbtp
+Live with Github Pages at: http://jessicabarnett.github.io/DangerousWaters/
